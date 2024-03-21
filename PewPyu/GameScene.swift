@@ -114,21 +114,36 @@ class GameScene: SKScene {
   func random() -> CGFloat {
     return CGFloat(Float(arc4random()) / 0xFFFFFFFF)
   }
+    // arc4random() generates a random unsigned 32 bit integer.
+    // Float() turns that into a floating point number
+    // 0xFFFFFFFF represents the max value of 32 bit ints. dividing by it will "normalize" and ensure we get a vlue between 0.0 and 1.0
+    //CGFloat converts it into CGFloat for graphics reasons?
   
 //function to generate random numbers within a specified range
   func random(min: CGFloat, max: CGFloat) -> CGFloat {
     return random() * (max - min) + min
   }
+            // using this for height calculations below, we're putting a minimum and maximum spawn height
+            // i need dumb notes about the math so
+            // random() will generate a random 0.0 to 1.0 number. subtracting min height from max height and multiplying that by the random number
+    
+    
   
 
   func addMonster() {
     
+    let monsterSprites: [String] = ["monster", "redMonster", "blueMonster", "greenMonster"]
+    let mColors = Int.random(in: 0..<monsterSprites.count)
+      
     // Create sprite
-    let monster = SKSpriteNode(imageNamed: "monster")
+    let monster = SKSpriteNode(imageNamed: monsterSprites[mColors])
     
     // Determine where to spawn the monster along the Y axis
     let actualY = random(min: monster.size.height/2, max: size.height - monster.size.height/2) //INVESTIGATE WHY THESE CALCULATIONS AT SOME POINT!!!!!!!
-    
+            // so if the min height is half the size of the monster (ex: 5), and the max is the size of the screen minus the half the height of the monster (ex: 20-5 = 15)
+            // then we'll get a random number like 0.3, do (15-5) = 10, multiply 0.3 by 10 to get 3 and then add 5 to that to choose the y position
+      
+      
     // Position the monster slightly off-screen along the right edge,
     // and along a random position along the Y axis as calculated above
     monster.position = CGPoint(x: size.width + monster.size.width/2, y: actualY)
