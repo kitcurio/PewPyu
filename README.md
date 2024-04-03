@@ -34,14 +34,23 @@ In addition to teaching me some of the fundamentals of SpriteKit, commenting on 
 * Using classes, subclasses, and inheritance 
 
 * Using CHHapticEngine; making & playing custom haptic patterns
+* Understanding bitmasks and logical operators
+* Understanding retain cycles
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE GOALS -->
 ## Future Goals
-* implement gameplaykit and use entities and components
-* put ty in the game (boss mode)
-* add a way to keep track of score and add a leaderboard (use game to learn how to manage data in swift)
+* Currently learning about GameplayKit and working on refactoring my code to use it
+  * using entities and components to set up a more reusable structure that will make it easier to add other things to the game
+* Currently working on adding a boss to the game that takes longer to kill
+
+> [!NOTE]
+> It isn't functional yet, but I'm working on the above things in the "boss" branch.
+
+* Adding different enemy types that move in different ways
+* Adding player movement
+* Adding score-tracking and a leaderboard
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -52,16 +61,18 @@ https://github.com/kitcurio/PewPyu/assets/80923104/bebeaa31-3c0f-4f3e-ae06-bc3dd
 
 https://github.com/kitcurio/PewPyu/assets/80923104/3bd24e28-a4fb-4b3a-87ca-a815ab31fcd2
 
+### Splash screen
+---
 
-
-
-
-
+<a href="https://github.com/github_username/repo_name">
+    <img src="splashscreenpp.jpeg" alt="Splash screen with a skull in the middle of it">
+  </a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Tutorial shoutout?
+## Acknowledgement 
 
+This project was built with guidance and inspiration from Kodeco's [SpriteKit beginner tutorial](https://www.kodeco.com/71-spritekit-tutorial-for-beginners). 
 
 
 
